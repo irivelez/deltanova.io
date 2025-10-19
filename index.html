@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeltaNova</title>
+    <title>DELTANOVA - Your Velocity Partner for AI Transformation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,132 +15,523 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #0A1628;
             line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            background: #FFFFFF;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 0 24px;
         }
 
-        .section {
-            margin: 3rem 0;
+        /* Navigation */
+        nav {
+            padding: 24px 0;
+            border-bottom: 1px solid #F5F5F7;
         }
 
-        .section h2 {
-            color: #667eea;
-            margin-bottom: 1rem;
-            font-size: 2rem;
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .cards {
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0A1628;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #EA580C;
+        }
+
+        .nav-cta {
+            background: #EA580C;
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: #DC2626;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .highlight {
+            color: #EA580C;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #64748B;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #EA580C;
+            color: #FFFFFF;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #DC2626;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #0A1628;
+            padding: 16px 32px;
+            border: 2px solid #0A1628;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: #0A1628;
+            color: #FFFFFF;
+        }
+
+        /* Stats Bar */
+        .stats {
+            background: #F5F5F7;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #EA580C;
+            margin-bottom: 8px;
+        }
+
+        .stat-item p {
+            color: #64748B;
+            font-size: 14px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #64748B;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Problem Section */
+        .problem {
+            background: #0A1628;
+            color: #FFFFFF;
+        }
+
+        .problem .section-header h2,
+        .problem .section-header p {
+            color: #FFFFFF;
+        }
+
+        .problem-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 32px;
         }
 
-        .card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+        .problem-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        .problem-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #EA580C;
         }
 
-        .card h3 {
-            color: #764ba2;
-            margin-bottom: 0.5rem;
+        .problem-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
         }
 
-        footer {
-            background: #2d3748;
-            color: white;
+        /* Process Section */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            position: relative;
+            padding: 32px;
+            background: #F5F5F7;
+            border-radius: 12px;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 32px;
+            width: 48px;
+            height: 48px;
+            background: #EA580C;
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .process-step h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            margin-top: 16px;
+        }
+
+        .process-step p {
+            color: #64748B;
+            line-height: 1.7;
+        }
+
+        /* Why Now Section */
+        .why-now {
+            background: #F5F5F7;
+        }
+
+        .insight {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px;
+            background: #FFFFFF;
+            border-radius: 12px;
+            border-left: 4px solid #EA580C;
+        }
+
+        .insight h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .insight p {
+            font-size: 18px;
+            color: #64748B;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .insight strong {
+            color: #0A1628;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0A1628 0%, #1e3a5f 100%);
+            color: #FFFFFF;
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 0.8rem 2rem;
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 24px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #0A1628;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 60px 0 32px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: #FFFFFF;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .footer-links h4 {
+            color: #FFFFFF;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1rem;
-            transition: background 0.3s ease;
+            display: block;
+            margin-bottom: 12px;
+            transition: color 0.2s;
         }
 
-        .cta-button:hover {
-            background: #764ba2;
+        .footer-links a:hover {
+            color: #EA580C;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 32px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>DeltaNova</h1>
-        <p>Innovation Meets Excellence</p>
-    </header>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">DELTA<span>NOVA</span></a>
+                <a href="#contact" class="nav-cta">Get Early Access</a>
+            </div>
+        </div>
+    </nav>
 
-    <div class="container">
-        <section class="section">
-            <h2>Welcome to DeltaNova</h2>
-            <p>This is a modern, responsive landing page ready to be customized for your needs. Built with clean HTML and CSS, it's perfect for showcasing your project, business, or portfolio.</p>
-            <a href="#" class="cta-button">Get Started</a>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>From AI Curious to <span class="highlight">AI-Powered</span> in Weeks, Not Years</h1>
+            <p>We accelerate LATAM businesses into the AI era through rapid experimentation and proven implementation. Your velocity partner for transformation that actually ships.</p>
+            <div class="cta-group">
+                <a href="#contact" class="btn-primary">Start Your Transformation</a>
+                <a href="#how" class="btn-secondary">See How We Work</a>
+            </div>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>Features</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Responsive Design</h3>
-                    <p>Looks great on all devices, from mobile phones to desktop computers.</p>
+    <!-- Stats Bar -->
+    <div class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>30 Days</h3>
+                    <p>To First Measurable Impact</p>
                 </div>
-                <div class="card">
-                    <h3>Modern UI</h3>
-                    <p>Clean and contemporary design that captures attention and engages visitors.</p>
+                <div class="stat-item">
+                    <h3>10+ Years</h3>
+                    <p>Telco & Tech Ecosystem Expertise</p>
                 </div>
-                <div class="card">
-                    <h3>Easy to Customize</h3>
-                    <p>Simple HTML and CSS structure makes it easy to modify and extend.</p>
+                <div class="stat-item">
+                    <h3>100% LATAM</h3>
+                    <p>Built for Our Market</p>
                 </div>
             </div>
-        </section>
-
-        <section class="section">
-            <h2>About</h2>
-            <p>DeltaNova represents the change (Delta) and new beginnings (Nova). This template is designed to help you launch your web presence quickly and professionally. Customize the content, colors, and structure to match your brand and vision.</p>
-        </section>
+        </div>
     </div>
 
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2>The AI Gap is Growing. Fast.</h2>
+                <p>While global companies race ahead, LATAM businesses are stuck between knowing they need AI and knowing how to implement it.</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>Traditional Consultants Move Too Slow</h3>
+                    <p>Six-month discovery phases and PowerPoint decks don't cut it when your competitors are shipping AI features monthly.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Your Team Lacks AI Expertise</h3>
+                    <p>Hiring AI talent is expensive and slow. You need results now, not after a year of failed recruitment.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Pilots That Never Scale</h3>
+                    <p>You've tried AI experiments that looked promising but never made it to production. Sound familiar?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work -->
+    <section id="how">
+        <div class="container">
+            <div class="section-header">
+                <h2>We Move at Startup Speed with Enterprise Reliability</h2>
+                <p>Our experimental approach delivers measurable value in weeks, then optimizes continuously.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Rapid Discovery</h3>
+                    <p>We identify your most critical, predictable processes that AI can transform immediately. No endless analysis—just focused action.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Fast Implementation</h3>
+                    <p>We build and deploy AI agents leveraging agentic frameworks and cloud infrastructure. See results in your first 30 days.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Continuous Optimization</h3>
+                    <p>We measure, learn, and improve. Your AI capabilities evolve as your business does—this is partnership, not a project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Now -->
+    <section class="why-now">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why LATAM Can't Wait</h2>
+            </div>
+            <div class="insight">
+                <h3>The world is changing faster than humanity can adapt</h3>
+                <p>LATAM's SMBs are the region's productivity engine, but they're falling behind. Not because of lack of ambition—because of lack of access to the right expertise and tools.</p>
+                <p><strong>We believe</strong> the solution isn't more education or more tools. It's about embedding the right technology into your business <em>now</em>, with partners who understand both cutting-edge AI and LATAM business reality.</p>
+                <p><strong>The opportunity?</strong> Companies that move now will lead their industries. Those who wait will spend years catching up.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to Move Faster?</h2>
+            <p>We're working with a select group of future-ready LATAM businesses. If you're tired of waiting and ready to experiment, let's talk.</p>
+            <a href="mailto:hello@deltanova.io" class="btn-primary" style="background: #EA580C;">Get Early Access → hello@deltanova.io</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 DeltaNova. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>DELTANOVA</h3>
+                    <p>Accelerating LATAM businesses into the AI era. Your velocity partner for transformation that ships results, not reports.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="#how">How We Work</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="mailto:hello@deltanova.io">hello@deltanova.io</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DELTANOVA. Built in Colombia, serving LATAM.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
