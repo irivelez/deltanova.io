@@ -31,8 +31,7 @@
 
         /* ── NAV ── */
         nav{position:fixed;top:0;width:100%;z-index:100;padding:.875rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(5,5,7,.75);backdrop-filter:blur(24px);border-bottom:1px solid var(--b1)}
-        .logo{display:flex;align-items:center}
-        .logo img{height:22px;width:auto}
+        .logo{font-family:var(--sans);font-size:1.1rem;font-weight:800;color:var(--brand);letter-spacing:-.02em;text-decoration:none}
         .nav-r{display:flex;align-items:center;gap:2rem}
         .nav-link{font-family:var(--mono);font-size:.7rem;color:var(--t3);text-decoration:none;letter-spacing:.04em;transition:color .2s}
         .nav-link:hover{color:var(--t1)}
@@ -187,7 +186,7 @@
 
         /* ── FOOTER ── */
         footer{padding:3rem 2rem;border-top:1px solid var(--b1);display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto}
-        .f-logo{display:flex;align-items:center}.f-logo img{height:18px;width:auto;opacity:.7}
+        .f-logo{font-family:var(--sans);font-size:.95rem;font-weight:800;color:var(--brand);letter-spacing:-.02em;opacity:.7}
         .f-tag{font-family:var(--mono);font-size:.65rem;color:var(--t4);letter-spacing:.04em}
 
         /* ── RESPONSIVE ── */
@@ -209,7 +208,7 @@
 
 <!-- Nav -->
 <nav>
-    <div class="logo"><img src="assets/logo-white.png" alt="DeltaNova"></div>
+    <div class="logo">deltanova</div>
     <div class="nav-r">
         <a href="#how" class="nav-link">How it works</a>
         <a href="#contact" class="nav-cta">Talk to us</a>
@@ -421,7 +420,7 @@
 
 <!-- Footer -->
 <footer>
-    <div class="f-logo"><img src="assets/logo-white.png" alt="DeltaNova"></div>
+    <div class="f-logo">deltanova</div>
     <div class="f-tag">Born in Colombia. Operated from San Francisco.</div>
 </footer>
 
